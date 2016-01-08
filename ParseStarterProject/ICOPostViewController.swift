@@ -50,7 +50,8 @@ class ICOPostViewController: UIViewController, UINavigationControllerDelegate, U
             
             //Aqui vamos con la imagen
             //extraemos el dato de la imagen
-            let imageData = UIImagePNGRepresentation(self.myImageToPost.image!)
+            let imageData = UIImageJPEGRepresentation(self.myImageToPost.image!, 25.0)
+            //let imageData = UIImagePNGRepresentation(self.myImageToPost.image!)
             
             //Creamos un fichero especial de Parse.com
             let imageFile = PFFile(name: "image.png", data: imageData!)

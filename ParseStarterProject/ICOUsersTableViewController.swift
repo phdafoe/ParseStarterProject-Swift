@@ -36,6 +36,8 @@ class ICOUsersTableViewController: UITableViewController {
         myTableViewOfParse.addSubview(refresher)
         
         self.updateUsersOfParse()
+        
+        self.title = PFUser.currentUser()?.username
    
     }
     
